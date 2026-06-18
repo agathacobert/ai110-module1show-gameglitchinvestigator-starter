@@ -25,21 +25,33 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- Game Purpose: It’s a simple number-guessing game where you try to find a secret number picked by the app. It gives you hints after every try to help you narrow it down, and it tracks your score until you either win or run out of turns.
+
+- Bugs Found: 
+   The hints were completely backwards. It told me to go higher when I should have gone lower, and vice versa.
+
+   The app was trying to compare text (the user's input) with a number (the secret guess), which caused a crash.
+
+- Fixes Applied:
+   I updated the game logic so the "Go HIGHER" and "Go LOWER" hints actually point you in the right direction.
+
+   I added a step to convert the user's input into a number before comparing it, which fixed the crash and let the game run smoothly.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. The game initializes and selects a secret number (e.g., 50).
+2. The user enters a guess of 25.
+3. The game correctly identifies the guess is too low and returns "Go HIGHER!"
+4. The user enters a guess of 75.
+5. The game correctly identifies the guess is too high and returns "Go LOWER!"
+6. The user enters the correct number (50).
+7. The game displays a success message, and the score updates to reflect the win.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+
+![alt text](image-2.png)
 
 ## 🧪 Test Results
 
